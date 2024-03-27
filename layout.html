@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Landing Page</title>
+	<style>
+		body {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+            color: #222831;
+		}
+		header {
+			width: 100%;
+			padding: 20px;
+			background-color: #31363f;
+			text-align: center;
+            color: white;
+		}
+		main {
+			width: 100%;
+			display: flex;
+			justify-content: space-around;
+			padding: 20px;
+			box-sizing: border-box;
+		}
+		nav {
+			width: 30%;
+			border-right: 1px solid #76abae;
+			padding-left: 30px;
+            background-color: #76abae;
+		}
+		nav ul {
+			padding: 0;
+			margin: 0;
+		}
+		nav ul li {
+			margin-bottom: 10px;
+		}
+		nav ul li a {
+			text-decoration: double;
+            font-weight: bolder;
+			color: antiquewhite;
+		}
+		section {
+			width: 70%;
+			padding-left: 20px;
+			box-sizing: border-box;
+            background-color: #eeeeee;
+		}
+        .card {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            color: black;
+        }
+		aside {
+			display: flex;
+			flex-wrap: wrap;
+			width: 100%;
+			padding: 20px;
+			box-sizing: border-box;
+            background-color: lightgray;
+            color: black;
+		}
+		footer {
+			width: 100%;
+			padding: 20px;
+			background-color: #31363f;
+			text-align: center;
+			margin-top: 20px;
+            color: white;
+		}
+        span.field{
+            font-weight: bold;
+            width: 200px;
+        } 
+        .info{
+            margin-bottom: 5px;
+        }
+        .info span{
+            display:inline-block;
+            border: 1px slategray;
+        }
+        .info-value{
+            margin-left: 5px;
+        }
+	</style>
+</head>
+<body>
+	<header>
+		<h1>BIOGRAFI SAYA</h1>
+	</header>
+	<main>
+		<nav>
+			<h3>Navigation</h3>
+			<ul>
+				<li><a href="#profile">Biografi</a></li>
+				<li><a href="#tasks">Tugas</a></li>
+			</ul>
+		</nav>
+		<section>
+			<h2 id="profile">Biografi</h2>
+            <img src="tiara.jpg" style="float: left; margin-right: 1cm; margin-bottom: 1cm;" height="300px" width="300px">
+			<div>
+                <div class="info">
+                    <span class="field">NIM</span> <span class="info-value">: A12.2022.06803</span>
+                </div>
+                <div class="info">
+                    <span class="field">Nama</span> <span class="info-value">: Tiara Bifani</span>
+                </div>
+                <div class="info">
+                    <span class="field">Jenis Kelamin</span> <span class="info-value">: Perempuan</span>
+                </div>
+                <div class="info">
+                    <span class="field">Tempat, tanggal lahir</span> <span class="info-value">: Grobogan, 1 April 2004</span>
+                </div>
+                <div class="info">
+                    <span class="field">Asal Sekolah</span> <span class="info-value">: SMAN 1 Gubug</span>
+                </div>
+                <div class="info">
+                    <span class="field">Alamat tempat tinggal</span> <span class="info-value">: Gubug, Grobogan, Jawa Tengah</span>
+                </div>
+                <div class="info">
+                    <span class="field">E-mail</span> <span class="info-value">: 112202206803@mhs.dinus.ac.id</span>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+			<h2 id="tasks">Tugas</h2>
+			<div class="card">
+                <h3>Tugas 1</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, recusandae ipsum tempore odit quo laboriosam unde quos rem maiores optio aliquid harum, natus asperiores nulla officia sed, aliquam ducimus aperiam.
+                </p>
+              </div>
+		</section>
+	</main>
+	<aside>
+		<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos in fuga, sed nihil expedita dolor, eveniet dolorum mollitia, cumque placeat nisi perferendis sint dolores. Enim officia distinctio alias libero nihil.</p>
+	</aside>
+	<footer>
+		<p>A12.2022.06803 Tiara Bifani</p>
+	</footer>
+</body>
+</html>
