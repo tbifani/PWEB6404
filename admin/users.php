@@ -33,14 +33,44 @@
           </div>
         </div>
         <div class="card-body">
+          <?php
+        session_start();
+        include('dbconnect.php');
+
+        if(isset($_SESSION['views']))
+        {
+            // echo "SELAMAT DATANG, ", $_SESSION['nama'];
+            $rs = $k->query("SELECT * FROM admin WHERE active = 1");
+            $data = $rs->fetch_all(MYSQLI_ASSOC);
+        ?>
           <table width="100%" border="1">
             <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
+                <th>ID</th>
+                <th>NIM</th>
+                <th>Nama</th>
+                <th>Email</th>
+                <th>Prodi</th>
+                <th>Alamat</th>
             </tr>
+            <?php
+                $i = 1;
+                foreach($data as $value)
+                {
+                ?>
+                    <tr>
+                        <td><?php echo $i?></td>
+                        <td><?php echo $value['nim']?></td>
+                        <td><?php echo $value['nama']?></td>
+                        <td><?php echo $value['email']?></td>
+                        <td><?php echo $value['prodi']?></td>
+                        <td><?php echo $value['alamat']?></td>
+                        <td><?php echo $value['active']==1?"Aktif":"Tidak Aktif"?></td>
+                        <td><a href="edit.php?id=<?php echo $value['id']?>">Edit</a> | <a href="delete.php?id=<?php echo $value['id']?>">Delete</a></td>
+                    </tr>
+                <?php
+                    $i++;
+                }
+        ?>
           </table>
         </div>
         <!-- /.card-body -->

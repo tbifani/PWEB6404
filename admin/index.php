@@ -222,9 +222,13 @@
               </li>
             </ul>
           </li>
-            <a href="?page=input-data" class="nav-link">
+            <a href="?page=users" class="nav-link">
               <i class="nav-icon fas fa-table"></i>
               <p>Data Mahasiswa</p>
+            </a>
+            <a href="?page=input-data" class="nav-link">
+              <i class="nav-icon fas fa-table"></i>
+              <p>Input Data Mahasiswa</p>
             </a>
         </ul>
       </nav>

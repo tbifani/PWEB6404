@@ -9,17 +9,18 @@
     }
     elseif($jenis == 'users')
     {
-        $user = $_POST['username'];
-        $paswd = md5(sha1($_POST['paswd']));
-        $email = $_POST['email'];
+        $nim = $_POST['nim'];
         $nama = $_POST['nama'];
+        $email = $_POST['email'];
+        $prodi = $_POST['prodi'];
+        $alamat = $_POST['alamat'];
     
-        $insert = $k->query("INSERT INTO users (username,nama,email,paswd,active) VALUES ('".$user."','".$nama."','".$email."','".$paswd."',1)");
+        $insert = $k->query("INSERT INTO admin (nim,nama,email,prodi,alamat,active) VALUES ('".$nim."','".$nama."','".$email."','".$prodi."','".$alamat."',1)");
     }
 
     if($insert)
     {
-       header("Location: index.php?page=".$page);
+       header("Location: index.php?page=users".$page);
     }
     else
     {
