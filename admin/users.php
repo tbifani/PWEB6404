@@ -72,6 +72,14 @@
                 }
         ?>
           </table>
+        <?php
+        }
+        else
+        {
+            echo "session belum diset";
+            echo '<a href="session.php">Set session disini</a>';
+        }
+        ?>
         </div>
         <!-- /.card-body -->
       </div>

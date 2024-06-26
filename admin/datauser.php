@@ -1,17 +1,9 @@
 <?php
     include('dbconnect.php');
-    $_SESSION['views'] = 1;
+    $id = $_GET['id'];
+    $data = $k->query("SELECT * FROM admin WHERE id='".$id."'");
 
-    if(isset($_SESSION['views']))
-    {
-        $_SESSION['views']++;
-    }
-    else
-    {
-        $_SESSION['views'] = 1;
-    }
-
-    if(isset($_SESSION['views']))
+    if($data->num_rows == 1)
     {
         // echo "SELAMAT DATANG, ", $_POST['nama'];
         ?>
@@ -23,4 +15,9 @@
                 <input type="text" name="alamat" required placeholder="Alamat"><br>
                 <input type="submit" value="Simpan">
         </form>
-        
+        <?php
+    }
+    else
+    {
+        echo "data tidak ditemukan";
+    }

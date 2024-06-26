@@ -1,25 +1,23 @@
 <?php
-    if($_SESSION['is_logged_in'] != TRUE)
-    {
-        header("Location: form.php");
-    }
+    // if($_SESSION['is_logged_in'] != TRUE)
+    // {
+    //     header("Location: form.php");
+    // }
     include("dbconnect.php");
 
-    $username = $_POST['username'];
-    $email = $_POST['email'];
+    $nim = $_POST['nim'];
     $nama = $_POST['nama'];
-    $id = $_POST['userid'];
+    $email = $_POST['email'];
+    $prodi = $_POST['prodi'];
+    $alamat = $_POST['alamat'];
 
-    if($_POST['passwd'] = "")
+    $edit = $k->query("UPDATE users SET nim='".$nim."', nama='".$nama."', email='".$email."', prodi='".$prodi."', alamat='".$alamat."' WHERE id='".$id."'");
+
+    if($edit)
     {
-        $k->query("UPDATE users SET username='".$username."', nama='".$nama."', email='".$email."' WHERE id='".$id."'");
+       header("Location: index.php?page=users".$page);
     }
     else
     {
-        $password = md5(sha1($_POST['passwd']));
-        $k->query("UPDATE users SET username='".$username."', nama='".$nama."', email='".$email."', passwd='".$password."' WHERE id='".$id."'");
+        echo "edit data gagal";
     }
-
-    header("Location: main.php");    
-
-    
