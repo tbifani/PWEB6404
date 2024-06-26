@@ -1,6 +1,6 @@
 <?php
     include('dbconnect.php');
-    $id = $_GET['id'];
+    $id = $_GET['urut'];
     $data = $k->query("SELECT * FROM admin WHERE id='".$id."'");
     if($data->num_rows == 1)
     {

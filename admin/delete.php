@@ -6,7 +6,7 @@
     
     if($jenis == 'users')
     {
-        $id = $_GET['id'];
+        $id = $_GET['urut'];
         $delete = $k->query("DELETE FROM admin WHERE id=".$id);
     }
 

@@ -5,6 +5,7 @@
     // }
     include("dbconnect.php");
 
+    $id = $_GET['urut'];
     $nim = $_POST['nim'];
     $nama = $_POST['nama'];
     $email = $_POST['email'];

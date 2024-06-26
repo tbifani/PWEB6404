@@ -1,6 +1,6 @@
 <?php
     include("dbconnect.php");
-
+    $id = $_GET['urut'];
     $jenis = $_GET['jenis-data'];
     $page = $_GET['page'];
     if($jenis == 'mahasiswa')

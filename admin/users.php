@@ -34,9 +34,9 @@
         </div>
         <div class="card-body">
           <?php
-        session_start();
+        // session_start();
         include('dbconnect.php');
-
+        $_SESSION['views'] = 1;
         if(isset($_SESSION['views']))
         {
             // echo "SELAMAT DATANG, ", $_SESSION['nama'];
@@ -51,6 +51,7 @@
                 <th>Email</th>
                 <th>Prodi</th>
                 <th>Alamat</th>
+                <th>Action</th>
             </tr>
             <?php
                 $i = 1;
@@ -64,8 +65,8 @@
                         <td><?php echo $value['email']?></td>
                         <td><?php echo $value['prodi']?></td>
                         <td><?php echo $value['alamat']?></td>
-                        <td><?php echo $value['active']==1?"Aktif":"Tidak Aktif"?></td>
-                        <td><a href="edit.php?id=<?php echo $value['id']?>">Edit</a> | <a href="delete.php?id=<?php echo $value['id']?>">Delete</a></td>
+                        <!-- <td><?php echo $value['active']==1?"Aktif":"Tidak Aktif"?></td> -->
+                        <td><a href="edit.php?urut=<?php echo $value['id']?>">Edit</a> | <a href="delete.php?urut=<?php echo $value['id']?>">Delete</a></td>
                     </tr>
                 <?php
                     $i++;
