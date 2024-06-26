@@ -12,7 +12,7 @@
     $prodi = $_POST['prodi'];
     $alamat = $_POST['alamat'];
 
-    $edit = $k->query("UPDATE users SET nim='".$nim."', nama='".$nama."', email='".$email."', prodi='".$prodi."', alamat='".$alamat."' WHERE id='".$id."'");
+    $edit = $k->query("UPDATE admin SET nim='".$nim."', nama='".$nama."', email='".$email."', prodi='".$prodi."', alamat='".$alamat."' WHERE id='".$id."'");
 
     if($edit)
     {

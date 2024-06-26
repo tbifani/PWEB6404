@@ -1,14 +1,14 @@
 <?php
     include("dbconnect.php");
 
-    $jenis = $_GET['jenis'];
-    $page = $_GET['page'];
+    // $jenis = $_GET['jenis'];
+    // $page = $_GET['page'];
     
-    if($jenis == 'users')
-    {
+    // if($jenis == 'users')
+    // {
         $id = $_GET['urut'];
         $delete = $k->query("DELETE FROM admin WHERE id=".$id);
-    }
+    // }
 
     if($delete)
     {
